@@ -1,25 +1,56 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
+import Navbar from './components/Navbar'
+import Image from './components/Image'
+import Login from './components/Login'
+
+import styled from 'styled-components';
+import React,{useState} from 'react';
+
+
 
 function App() {
+  const adminUser ={
+    email:"admin@admin.com",
+    pssword:"admin123"
+
+  }
+
+
+  const [user, setUser]= useState({name:"", email:""});
+  const [error, setError]= useState("")
+
+  const LoginToken = details =>{
+    console.log(details);
+
+  }
+
+  const Logout = () =>{
+    console.log("logout")
+  }
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Container>
+    <Header/>
+    <Image/>
+    <Login user = {user} />
+    <Navbar/>
+    
+    </Container>
+    </>
+  )
 }
 
+
+const Container = styled.div`
+      overflow:hidden;`
+
+
+
 export default App;
+
+
