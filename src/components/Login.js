@@ -1,27 +1,29 @@
 import React from "react";
 import styled from 'styled-components';
+import LoginForm from './LoginForm';
 
 
 
 const FormLogin = styled.div`
-        width:40vh;
-        height:60vh;
+      ;
         position:absolute;
         top:30%;
         right:20%;
-        background:rgba(196, 196, 196, 0.8);
+        box-shadow: 9px 10px 6px 1px rgba(0,0,0,0.75);
+
         text-align:center;
         font-family: 'Press Start 2P', cursive;
 
 `
 
 
-const Login =(props)=>{
+const Login =({user,login,error,logout,logged})=>{
+    ;
     return(
         <FormLogin>
-        {(props.user.name != "") ? (<div>
-            <h2>Welcome! {props.user.name}</h2>
-                <button>Logout</button></div>) : (<h3>login</h3>)}</FormLogin>)
+        {(user.name != "") ? (
+           <div>welcome</div>)
+         : (<LoginForm  login={login} error={error}/>)}</FormLogin>)
             }
 
 

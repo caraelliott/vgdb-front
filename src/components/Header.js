@@ -2,6 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import Hamburger from 'hamburger-react';
 import cartridge from '../assets/cartridge.png'
+import Userprofile from './Userprofile';
 
 
 
@@ -10,9 +11,7 @@ const HaederStyle= styled.div`
         justify-content:space-between;
         align-items:center;
         width:99vw;
-      
         font-family: 'Press Start 2P', cursive;
-        background:rgba(196, 196, 196, 1);
         padding-left:10px;
         
         `
@@ -22,13 +21,15 @@ const Button = styled.button`
         text-decoration: none;
         background:none;`
 
-const Header = () =>{
+const Header = ({user, logged,logout}) =>{
     return(
         <>
         <HaederStyle>
         <Hamburger size ={40}/>
         <h1>Home Page</h1>
-        <Button><img src ={cartridge}/></Button>
+        
+        <Userprofile user={user} logged={logged} logout={logout}/>
+        <Button><img src ={cartridge} size={10}/></Button>
         </HaederStyle>
 
 

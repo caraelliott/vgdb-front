@@ -2,7 +2,7 @@ import styled from 'styled-components';
 // import cart from '../assets/cartridge.png'
 
 
-import cart from '../assets/games.png'
+import cart from '../assets/video-games.jpg'
 
 const Cartridge = styled.div`
             background-image: url(${cart});
@@ -11,7 +11,7 @@ const Cartridge = styled.div`
             position:absolute;
             right:0;
             z-index:-1;
-            // background-size: cover;
+            background-size: cover;
            `
 
 const Image=() =>{
