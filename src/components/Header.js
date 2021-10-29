@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import Hamburger from 'hamburger-react';
 import cartridge from '../assets/cartridge.png'
 import Userprofile from './Userprofile';
+import Dropdown from 'react-bootstrap/Dropdown'
+import { Link } from 'react-router-dom'
 
 
 
-const HaederStyle= styled.div`
+const HeaderStyle= styled.div`
         display:flex;
         justify-content:space-between;
         align-items:center;
@@ -24,13 +26,26 @@ const Button = styled.button`
 const Header = ({user, logged,logout}) =>{
     return(
         <>
-        <HaederStyle>
-        <Hamburger size ={40}/>
-        <h1>Home Page</h1>
+        <HeaderStyle>
+        <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+            <Hamburger size ={40}/>
+            </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+            <Dropdown.Item ><Link to ="collection" >Show Collection</Link></Dropdown.Item>
+            <Dropdown.Item><Link to ="MyWishList" >My WishList</Link></Dropdown.Item>
+            <Dropdown.Item> <Link to ="MyList" >My List</Link></Dropdown.Item>
+
+        </Dropdown.Menu>
+        </Dropdown>
+       
+        
         
         <Userprofile user={user} logged={logged} logout={logout}/>
         <Button><img src ={cartridge} size={10}/></Button>
-        </HaederStyle>
+      
+        </HeaderStyle>
 
 
 

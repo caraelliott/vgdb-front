@@ -32,7 +32,7 @@ const LoginForm=({login,error}) =>{
 
             <div class="nes-field">
             <label for="name_field">password</label> 
-            <input type="text" id="name_field" class="nes-input is-error" onChange={e =>setDetails({...details, password:e.target.value})} value={details.password}/>
+            <input type="password" id="name_field" class="nes-input is-error" onChange={e =>setDetails({...details, password:e.target.value})} value={details.password}/>
             </div>
             <div>
             <h2>  &nbsp;  </h2>
