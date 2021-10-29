@@ -5,7 +5,7 @@ import LoginForm from './LoginForm';
 
 
 const FormLogin = styled.div`
-      ;
+      
         position:absolute;
         top:30%;
         right:20%;
