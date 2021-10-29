@@ -1,6 +1,4 @@
 
-
-
 import { Routes, Route} from 'react-router-dom';
 import { MyWishList, MyList} from './pages'
 import HomePage from './HomePage'
@@ -181,5 +179,3 @@ export default App;
 
 
 // export default App;
-
-
