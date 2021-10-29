@@ -114,7 +114,7 @@ function HomePage() {
           <GameMap data={data}/>
 
 
-             :<h3>Loading...</h3>}
+             :<h3>Loading the Games...</h3>}
   
 
 
